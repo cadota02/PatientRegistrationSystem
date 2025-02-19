@@ -1,0 +1,36 @@
+@model Patient
+
+<div class="container d-flex justify-content-center align-items-center min-vh-60">
+     <div class="col-md-2 col-lg-6 shadow p-4 rounded bg-white">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white">
+            <h4><i class="fas fa-user"></i> Patient Details</h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Full Name</th>
+                    <td>@Model.Firstname, @Model.MiddleName, @Model.Lastname</td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td>@Model.Gender</td>
+                </tr>
+                <tr>
+                    <th>Date of Birth</th>
+                    <td>@Model.DateOfBirth.ToString("MMMM dd, yyyy")</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>@Model.Address</td>
+                </tr>
+             
+            </table>
+        </div>
+        <div class="card-footer text-end">
+            <a href="/Patients/Index" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to List</a>
+            <a href="/Patients/Edit/@Model.Id" class="btn btn-warning"><i class="fas fa-edit"></i> Edit</a>
+        </div>
+    </div>
+</div>
+</div>
